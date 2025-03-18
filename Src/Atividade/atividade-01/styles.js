@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         flex: 1, // container ocupa 100% da tela
         backgroundColor: '#fafafa', // cor do container
         borderRadius: 10, // borda curvada
-        padding: 8, 
+        padding: 67, 
         alignItems: 'center', // alinhamento horizontal - flexDirection collumn
     }, 
     titulo: {

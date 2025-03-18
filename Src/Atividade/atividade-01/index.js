@@ -1,12 +1,22 @@
-import { View, Text } from 'react-native';
+import { View, Text, Button, Alert } from 'react-native';
 import styles from './styles';
-function Atividade01 (){
-    return(
+
+function Atividade01() {
+  return (
     <View style={styles.container}>
-        <Text style={styles.titulo}> Exemplo 1</Text>
-        <Text style={styles.texto}>Aula PAM I, primeiro componente.</Text>
+      <Text style={styles.titulo}>Bem-Vindo</Text>
+      <Text style={styles.texto}>Telas de Exemplo do Condoo.</Text>
     </View>
-    );
+  );
 }
 
-export default Atividade01;
+export default function App() {
+  return (
+    <View style={{ flex: 5, justifyContent: 'center', alignItems: 'center' }}>
+      <Atividade01 />
+      <Button title="Clique Aqui" onPress={() => Alert.alert('Obrigado por aperta :)')} />
+    </View>
+  );
+}
+
+//export default Atividade01;

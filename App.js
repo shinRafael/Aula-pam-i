@@ -7,7 +7,7 @@ import constants from 'expo-constants';
 import Exemplo01 from './Src/exemplos/exemplos-01'; 
 //Atividade
 
-import Atividade01 from '/src/Atividade/atividade-01';
+import Atividade01 from '.atividade-01';
 
 export default function App() {
   return (
