@@ -1,19 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import constants from 'expo-constants';
+import Constants from 'expo-constants';
 
-//Exemplos
-import Exemplo01 from './Src/exemplos/exemplos-01'; 
-//Atividade
-
-import Atividade01 from '.atividade-01';
+// Exemplos
+import Exemplo01 from './Src/exemplos/exemplos-01';
+import Exemplo02 from './Src/exemplos/exemplos-02';
+//Atividades
+import Atividade01 from './Src/Atividade/atividade-01';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Atividade01/>
-      <StatusBar style="auto" />
+      <Exemplo02 />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -21,10 +21,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: 'darkslategray',
     //alignItems: 'center',
     //justifyContent: 'center',
     padding: 8,
-    marginTop: constants.statusBarHeight,
+    marginTop: Constants.statusBarHeight || 8, 
   },
 });

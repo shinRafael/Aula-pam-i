@@ -24,31 +24,11 @@ const styles = StyleSheet.create({
         borderColor: 'red',
         borderRadius: 20,
     },
-    texto: {
-        fontSize: RFPercentage(2.2),
-    },
-    botaotexto: {
-        fontSize: RFPercentage(2),
-        textAlign: 'center',
-        marginTop: 20,
-        textAlignVertical: 'center',
-        color: 'green',
-    },
-    botaocondominio: {
-        marginLeft: '5',
-        marginRight: 'auto',
-        backgroundColor: 'black',
-        borderWidth: 3,
-        marginTop: 20,
-        marginBottom: 20,
-        //padding: 8,
-        width: '30%',
-        height: 100,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        color: 'green',
-        borderColor: 'green',
-        borderRadius: 20,
+    imagem: {
+        //height: RFPercentage(16),
+        //width: RFPercentage(48),
+        width: '90%',
+        resizeMode: 'contain',
     },
 });
 

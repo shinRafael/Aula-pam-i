@@ -1,4 +1,4 @@
-import { View, Text, Button, Alert } from 'react-native';
+import { View, Text  } from 'react-native';
 import styles from './styles';
 
 function Atividade01() {
@@ -10,13 +10,5 @@ function Atividade01() {
   );
 }
 
-export default function App() {
-  return (
-    <View style={{ flex: 5, justifyContent: 'center', alignItems: 'center' }}>
-      <Atividade01 />
-      <Button title="Clique Aqui" onPress={() => Alert.alert('Obrigado por aperta :)')} />
-    </View>
-  );
-}
 
-//export default Atividade01;
+export default Atividade01;
