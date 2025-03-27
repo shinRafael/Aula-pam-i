@@ -9,10 +9,12 @@ import Exemplo02 from './Src/exemplos/exemplos-02';
 //Atividades
 import Atividade01 from './Src/Atividade/atividade-01';
 
+import Atividade02 from './Src/Atividade/atividade-02/card';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo02 />
+      <Atividade02 />
       <StatusBar style="light" />
     </View>
   );
