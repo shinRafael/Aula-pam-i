@@ -9,7 +9,7 @@ import Exemplo02 from './Src/exemplos/exemplos-02';
 //Atividades
 import Atividade01 from './Src/Atividade/atividade-01';
 
-import Atividade02 from './Src/Atividade/atividade-02/card';
+import Atividade02 from './Src/Atividade/atividade-02';
 
 export default function App() {
   return (
@@ -23,7 +23,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'darkslategray',
     //alignItems: 'center',
     //justifyContent: 'center',
     padding: 8,
