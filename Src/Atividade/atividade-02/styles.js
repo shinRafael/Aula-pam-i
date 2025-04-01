@@ -10,19 +10,19 @@ const styles = StyleSheet.create({
     alignItems: "center", 
   },
   titulo2: {
-    fontSize: RFPercentage(4), 
-    borderWidth: 3, 
-    marginTop: 20,  
-    marginBottom: 20,  
-    width: '100%',  
-    height: 80,   
-    textAlign: 'center',  
-    textAlignVertical: 'center', 
-    color: 'black',
-    backgroundColor: '#00BFFF', 
-    borderRadius: 40,  
+    fontSize: RFPercentage(4),  // tamanho da fonte
+    borderWidth: 3, //expessura da borda
+    marginTop: 20,  // margem acima do elemento
+    marginBottom: 20,   // margem abaixo do elemento
+    width: '100%',  // largura do objeto
+    height: 80,   // altura do objeto 
+    textAlign: 'center',   // alinhamento horizontal do texto no container
+    textAlignVertical: 'center',  // alinhamento vertical do texto no container
+    color: 'black',  //cor do texto 
+    backgroundColor: '#00BFFF', // cor da borda 
+    borderRadius: 40,   // arrendondar borda
   },
-  
+
 });
 
 export default styles;
