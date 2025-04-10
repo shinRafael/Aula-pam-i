@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 4,
+        borderRadius: RFPercentage(4),
       },
       
       txtBotaoQuadrado: {
@@ -38,12 +38,19 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
         paddingVertical: 15,
         borderRadius: 30,
-        marginTop: 20,
+        marginTop: 25,
       },
       
       txtBotaoZerar: {
         fontSize: RFPercentage(3),
         color: 'white',
+      },
+      titulo:{
+        color: 'violet',
+        fontFamily: 'arial',
+        fontStyle: 'normal',
+        fontWeight: '100',
+        fontSize: RFPercentage(4)
       },
 });
 
