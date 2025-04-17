@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
@@ -16,8 +16,9 @@ function Atividade04() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Insira seu Nome</Text>
-      <Text style={styles.texto}>{nomeCompleto}</Text>
+      <Text style={styles.titulo}>
+        {nomeCompleto ? nomeCompleto : 'Insira seu Nome'}
+      </Text>
 
       <Text>Nome</Text>
       <TextInput
@@ -35,9 +36,10 @@ function Atividade04() {
         placeholder="Digite seu sobrenome"
       />
 
-      <TouchableOpacity style={styles.txtBotao} onPress={exibirNomeCompleto}>
-        <Text style={styles.txtBotao}>Exibir texto</Text>
-      </TouchableOpacity>
+    <TouchableOpacity style={styles.txtBotao} onPress={exibirNomeCompleto}>
+    <Text style={styles.txtBotaoTexto}>Exibir texto</Text>
+    </TouchableOpacity>
+
     </View>
   );
 }
