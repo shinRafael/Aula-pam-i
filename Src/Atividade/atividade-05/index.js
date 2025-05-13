@@ -1,118 +1,51 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import styles from './styles';  // Importando os estilos
+import { View, Text } from 'react-native'; 
 
-function Exemplo05() {
-  const [num1, setNum1] = useState('');
-  const [num2, setNum2] = useState('');
-  const [total, setTotal] = useState('');
-  const [operator, setOperator] = useState('+');  // Estado para armazenar o operador
+import Input from './input'; 
+import Botao from './botao';
 
-  const handleCalculation = () => {
-    const n1 = parseFloat(num1);
-    const n2 = parseFloat(num2);
-    let result;
+import styles from './styles';
 
-    switch (operator) {
-      case '+':
-        result = n1 + n2;
-        break;
-      case '-':
-        result = n1 - n2;
-        break;
-      case '*':
-        result = n1 * n2;
-        break;
-      case '/':
-        result = n1 / n2;
-        break;
-      default:
-        result = 0;
-        break;
+export default function Atividade5() {
+
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
+
+    function handleZerar() {
+        setN1(0);
+        setN2(0);
+        setTotal(0);
     }
 
-    setTotal(result.toString());
-  };
+    return (
+        <View style={styles.container}>
+            <Text style={styles.titulo}> Exemplo 5 </Text>
 
-  const handleClear = () => {
-    setNum1('');
-    setNum2('');
-    setTotal('');
-    setOperator('+');  // Resetando para o operador inicial
-  };
+            <Text style={styles.txtSaida}> Calculadora básica </Text>
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Exemplo 5</Text>
+            <Text style={styles.textLabel}> 1º número </Text>
+            <Input onChangeText={setN1} value={n1} />
 
-      <Text style={styles.texto}>Calculadora básica</Text>
+            <Text style={styles.txtSaida}> + </Text>
 
-      <Text style={styles.texto}>1º número</Text>
-      <TextInput
-        style={styles.txtInput}
-        value={num1}
-        onChangeText={setNum1}
-        keyboardType="numeric"
-      />
+            <Text style={styles.textLabel}> 2º número </Text>
+            <Input onChangeText={setN2} value={n2} />
 
-      <Text style={styles.texto}>{operator}</Text>
+            <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
 
-      <Text style={styles.texto}>2º número</Text>
-      <TextInput
-        style={styles.txtInput}
-        value={num2}
-        onChangeText={setNum2}
-        keyboardType="numeric"
-      />
+            <Text style={styles.textLabel}> Total </Text>
+            <Input value={parseFloat(total).toFixed(2)} total />
 
-      <Text style={styles.texto}>=</Text>
+            <View style={styles.ladoAlado}>
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>+</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>-</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>*</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>/</Botao>        
+            </View>   
 
-      <Text style={styles.texto}>Total</Text>
-      <TextInput
-        style={styles.txtInput}
-        value={total}
-        editable={false}
-      />
+            <Botao onPress={handleZerar}>Zerar</Botao>         
 
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={styles.operationButton}
-          onPress={() => setOperator('+')}
-        >
-          <Text style={styles.operationButtonText}>+</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.operationButton}
-          onPress={() => setOperator('-')}
-        >
-          <Text style={styles.operationButtonText}>-</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.operationButton}
-          onPress={() => setOperator('*')}
-        >
-          <Text style={styles.operationButtonText}>*</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.operationButton}
-          onPress={() => setOperator('/')}
-        >
-          <Text style={styles.operationButtonText}>/</Text>
-        </TouchableOpacity>
-      </View>
-
-      <TouchableOpacity style={styles.txtBotao} onPress={handleCalculation}>
-        <Text style={styles.txtBotaoTexto}>Calcular</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.clearButton} onPress={handleClear}>
-        <Text style={styles.clearButtonText}>Limpar</Text>
-      </TouchableOpacity>
-    </View>
-  );
+        </View>
+    );
 }
-
-export default Exemplo05;
