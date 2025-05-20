@@ -25,7 +25,7 @@ export default function Exemplo6() {
         setImc(tmpImc);
         if (tmpImc <= 18.5) {
             setMensagem("Abaixo do peso");
-          } else if (tmpImc >= 18.6 && tmpImc <= 24.9) {
+          } else if (tmpImc >= 18. && tmpImc <= 24.9) {
             setMensagem("Peso normal");
           } else if (tmpImc >= 25.0 && tmpImc <= 29.9) {
             setMensagem("Sobrepeso");
